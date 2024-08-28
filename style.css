@@ -1,0 +1,183 @@
+:root {
+  /* Primary */
+  --Tomato: hsl(4, 100%, 67%);
+
+  /* Neutrals */
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--Dark-Slate-Grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+}
+
+.title {
+  font-size: 3.5em;
+  color: var(--Dark-Slate-Grey);
+}
+
+.description {
+  color: var(--Charcoal-Grey);
+}
+
+.label_email {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--Dark-Slate-Grey);
+}
+
+.container {
+  min-width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--White);
+  padding: 1em;
+  border-radius: 15px;
+  margin: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  gap: 1em;
+  margin: 1em 0;
+  color: var(--Charcoal-Grey);
+}
+
+.email_information {
+  width: 400px;
+  margin: 1em;
+}
+
+.email_address_section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  box-sizing: border-box;
+  margin-top: 3em;
+}
+
+.email,
+.subscribe_btn,
+.dismiss_btn {
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+}
+
+.email_info_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error_email {
+  display: none;
+  color: var(--Tomato);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.error_message {
+  background-color: hsla(4, 100%, 67%, 0.264);
+  border: 1px solid var(--Tomato);
+}
+
+.subscribe_btn,
+.dismiss_btn {
+  cursor: pointer;
+  background-color: #232742;
+  border: none;
+  color: whitesmoke;
+}
+
+.subscribe_btn:hover,
+.dismiss_btn:hover {
+  background-image: linear-gradient(
+    35deg,
+    hsl(4, 100%, 67%),
+    hsl(4, 100%, 51%)
+  );
+
+  box-shadow: 0px 0px 10px hsl(4, 100%, 67%);
+}
+
+.thankYouMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.thank_style {
+  padding: 3em;
+}
+
+.email_value {
+  font-weight: bold;
+}
+
+.success_message {
+  display: flex;
+  flex-direction: column;
+}
+
+.success_image {
+  width: 70px;
+}
+
+.main_thank_message {
+  font-size: 3em;
+  margin-bottom: 0.3em;
+}
+
+.dismiss_text {
+  line-height: 24px;
+  margin-bottom: 2em;
+}
+
+/* Mobile Design */
+@media all and (max-width: 480px) {
+  body {
+    display: block;
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    justify-content: start;
+    flex-direction: column-reverse;
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .title {
+    font-size: 2.5em;
+  }
+
+  .email_information {
+    width: initial;
+  }
+
+  .thankYouMessage {
+    margin: 3em;
+  }
+}
